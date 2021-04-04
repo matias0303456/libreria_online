@@ -1,0 +1,353 @@
+@font-face{
+    font-family: "Averia";
+    src: url(../css/fonts/AveriaSerifLibre-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Averia, serif;
+}
+
+body{
+    background-image: url(../img/general-background.jpg);
+    background-attachment: fixed;
+}
+
+.success, .fail, .warning{
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50%;
+}
+
+.success{
+    background-color: green;
+}
+
+.fail{
+    background-color: red;
+}
+
+.warning{
+    background-color: orange;
+}
+
+/*CONTENEDOR PRINCIPAL*/
+#container{
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+    width: 98%;
+    height: 100vh;
+    padding: 10px;
+    padding-top:10px;
+    padding-bottom: 0;
+    margin: 0px auto;
+}
+
+/*CABECERA*/
+header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    padding: 10px;
+    background-image: url(../img/header-background.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#title{
+    display: flex;
+    align-items: center;
+}
+
+#title h1{
+    font-size: 70px;
+    color: white;
+    text-shadow: 5px 5px 15px black;
+    letter-spacing: 3px;
+}
+
+#title h2{
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: lighter;
+    margin-top: 35px;
+    margin-left: 10px;
+    text-shadow: 5px 5px 10px black;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px black;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+    padding: 5px;
+}
+
+header nav ul li a:hover{
+    background-color: black;
+    border-radius: 5px;
+}
+
+/*CONTENIDO CENTRAL*/
+main{
+    display: flex;
+    background-color: transparent;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+aside{
+    width: 20%;
+    height: 800px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px white;
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+}
+
+aside h2{
+    margin-bottom: 10px;
+}
+
+aside a button{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 5px white;
+}
+
+aside form, 
+.users-section form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+aside form label, 
+.users-section form label{
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+aside form input, 
+.users-section form input,
+.users-section form select,
+button{
+    padding: 3px;
+    border-radius: 5px;
+}
+
+aside form input[type="submit"],
+.users-section form input[type="submit"],
+button{
+    width: 50%;
+    margin: 0px auto;
+    margin-top: 20px;
+    background-color: rgb(161, 75, 15);
+    color: white;
+    transition: all 300ms;
+}
+
+aside form input[type="submit"]:hover,
+.users-section form input[type="submit"]:hover,
+button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 5px white;
+    background-color: rgb(231, 209, 82);
+    color: black;
+}
+
+#controller-content{
+    width: 80%;
+    padding: 30px;
+    border: 2px solid black;
+    background-color: rgb(255,255,255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px rgb(231, 209, 82) inset, 3px 3px 3px black;
+}
+
+#controller-content img{
+    width: 30%;
+    float: left;
+    margin: 30px;
+    margin-right: 40px;
+    box-shadow: 3px 3px 5px black;
+}
+
+#controller-content h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+#controller-content h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+#controller-content h3{
+    text-align: center;
+    font-size: 25px;
+}
+
+#controller-content p{
+    text-align: justify;
+    margin: 20px;
+}
+
+#controller-content a{
+    text-decoration: none;
+}
+
+#controller-content a button{
+    display: block;
+    width: 20%;
+}
+
+#books-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 20px;
+}
+
+#controller-content .book{
+    height: auto;
+    text-align: center;
+    transition: all 300ms;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+#controller-content .book img {
+    width: 100%;
+    height: 60%;
+    box-shadow: 5px 5px 5px black;
+    margin: 0px auto;
+    margin-bottom: 50px;
+
+}
+
+#controller-content .book h3 a{
+    display: block;
+    color: orangered;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: all 300ms;
+}
+
+#controller-content .book h3 a:hover{
+    color: red;
+}
+
+#controller-content .book p{
+    text-align: center;
+}
+
+#controller-content .price{
+margin-top: 10px;
+color: red;
+font-size: 25px;
+}
+
+#controller-content .book:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px black;
+    background-color: white;
+}
+
+.users-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.users-section form{
+    width: 50%;
+    margin: 0px auto;
+}
+
+.users-section a button{
+    width: 20%;
+}
+
+.users-section h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.users-section .users-list-table{
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(240, 226, 151);
+    box-shadow: 5px 5px 5px black;
+}
+
+.users-section .users-list-table td{
+    padding: 10px;
+}
+
+.users-section .users-list-table td a{
+    text-decoration: none;
+    color: orangered;
+    transition: all 300ms;
+    padding: 5px;
+}
+
+.users-section .users-list-table td a:hover{
+    color: white;
+    background-color: orangered;
+    border-radius: 5px;
+}
+
+.users-section .users-list-table th{
+    padding: 10px;
+    border-bottom: 1px solid #000;
+}
+
+/*PIE DE PAGINA*/
+footer{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0px auto;
+    color: white;
+    background-color: rgb(161, 75, 15);
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 40px;
+    box-shadow: 0px 0px 10px black;
+    opacity: 0.9;
+}
